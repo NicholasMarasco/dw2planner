@@ -1,0 +1,35 @@
+## Vaccine Rookie
+1:AA:0:Agumon
+2:AB:0:Biyomon
+3:AC:0:ClearAgumon
+4:AD:0:Gomamon
+5:AE:0:Penguinmon
+6:AF:0:SnowAgumon
+7:AG:0:Tapirmon
+8:AH:0:Tentomon
+9:AI:0:ToyAgumon
+10:AJ:0:Veemon
+$$$
+## Data Rookie
+11:DA:0:Candlemon
+12:DB:0:Crabmon
+13:DC:0:Elecmon
+14:DD:0:Floramon
+15:DE:0:Gabumon
+16:DF:0:Gatsumon
+17:DG:0:Palmon
+18:DH:0:Patamon
+## Virus Rookie
+19:IA:0:Betamon
+20:IB:0:DemiDevimon
+21:IC:0:Dokunemon
+22:ID:0:Gazimon
+23:IE:0:Gizamon
+24:IF:0:Goburimon
+25:IG:0:Hagurumon
+26:IH:0:Kunemon
+27:II:0:Mushroomon
+28:IJ:0:Otamamon
+29:IK:0:SnowGoburimon
+30:IL:0:Syakamon
+31:IM:0:Tsukaimon
