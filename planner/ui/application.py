@@ -1,19 +1,18 @@
 import sys
+from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import (
     QApplication,
     QMainWindow,
     QWidget,
     QPushButton,
     QDesktopWidget,
-    QAction,
-    QMenu,
     QGridLayout,
     QLineEdit,
-    QTextEdit,
     QLabel,
-    qApp
+    QComboBox,
+    QSpacerItem,
 )
-from PyQt5.QtGui import QFont, QIcon
+from PyQt5 import QtGui
 
 def startUI():
     app = QApplication(sys.argv)
@@ -31,39 +30,39 @@ class UI_MainWindow(QWidget):
     def initUI(self, MainWindow):
 
         # Labels
-        title = QLabel('Title')
-        author = QLabel('Author')
-        review = QLabel('Review')
+        startLabel = QLabel('Start')
+        endLabel   = QLabel('End')
 
-        titleEdit = QLineEdit()
-        authorEdit = QLineEdit()
-        reviewEdit = QTextEdit()
+        # ComboBox fields
+        startBox = QComboBox(self)
+        startBox.addItem("Agumon")
+        startBox.addItem("Greymon")
+        endBox = QComboBox(self)
+        endBox.addItem("MetalGreymon")
+        endBox.addItem("WarGreymon")
 
         # Grid layout
         grid = QGridLayout()
-        grid.setSpacing(10)
+        grid.setSpacing(5)
 
-        grid.addWidget(title, 1, 0)
-        grid.addWidget(titleEdit, 1, 1)
+        grid.addWidget(startLabel, 1, 0)
+        grid.addWidget(startBox, 1, 1)
 
-        grid.addWidget(author, 2, 0)
-        grid.addWidget(authorEdit, 2, 1)
+        grid.addWidget(endLabel, 2, 0)
+        grid.addWidget(endBox, 2, 1)
 
-        grid.addWidget(review, 3, 0)
-        grid.addWidget(reviewEdit, 3, 1, 5, 1)
-
+        grid.addWidget(QPushButton('Go', self), 3, 0)
         qButton = QPushButton('Quit', self)
         qButton.clicked.connect(QApplication.instance().quit)
         qButton.resize(qButton.sizeHint())
-        grid.addWidget(qButton, 7, 0)
-        grid.addWidget(QPushButton('Button', self), 6, 0)
+        grid.addWidget(qButton, 4, 0)
         self.setLayout(grid)
 
         # Window settings
-        MainWindow.resize(800,600)
-        self.center(MainWindow)
-        MainWindow.setWindowTitle("Centered")
+        MainWindow.setWindowTitle("DW2Planner")
         MainWindow.setCentralWidget(self)
+        MainWindow.resize(250,100)
+        self.center(MainWindow)
 
     def center(self, MainWindow):
         qr = MainWindow.frameGeometry()
